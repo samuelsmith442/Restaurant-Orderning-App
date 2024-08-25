@@ -1,11 +1,27 @@
+:root {
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray-light: #DEDEDE;
+    --color-gray-medium: #D2D2D2;
+    --color-gray-dark: #8B8B8B;
+    --color-gray-darker: #3C3C3C;
+    --color-gray-lightest: #bbbbbb;
+    --color-green-lightest: rgb(236, 253, 245);
+    --color-green: #16db99;
+    --color-dark-green: #065F46;
+    --color-green-hover: #1ee09d;
+    --color-shadow: rgba(0, 0, 0, 0.15);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Smythe", sans-serif;
 }
+
 /********** LAYOUT **********/
-header, section  {
+header, section {
     max-width: 600px;
     margin: 0 auto;
     padding: 0 40px;
@@ -16,12 +32,13 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #fff;
+    color: var(--color-white);
     padding: 40px;
-    height: 150px;
+    height: 200px;
 }
+
 /********** TYPOGRAPHY **********/
-h1  {
+h1 {
     font-size: 39px;
     margin-bottom: 7px;
 }
@@ -31,20 +48,21 @@ header p {
 }
 
 h2 {
-    color: #000000;
+    color: var(--color-black);
     font-size: 28px;
 }
 
 h3 {
-    color: #000000;
+    color: var(--color-black);
     font-size: 20px;
 }
+
 /********** BUTTONS **********/
 .btn {
-    background-color: #16db99;
+    background-color: var(--color-green);
     border: none;
     border-radius: 3px;
-    color: #ffffff;
+    color: var(--color-white);
     cursor: pointer;
     font-family: 'Verdana', sans-serif;
     font-size: 16px;
@@ -54,17 +72,17 @@ h3 {
 }
 
 .btn:hover {
-    background-color: #1ee09d;
+    background-color: var(--color-green-hover);
 }
 
 .btn-add-item {
     margin-left: auto;
-    color: #3C3C3C;
+    color: var(--color-gray-darker);
     font-size: 30px;
-    background-color: #ffffff;
-    border: 1px solid #DEDEDE;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-light);
     border-radius: 50%;
-    width:  50px;
+    width: 50px;
     height: 50px;
     cursor: pointer;
     touch-action: manipulation;
@@ -76,7 +94,8 @@ h3 {
     margin-left: 13px;
     border: none;
     background: none;
-    color: #bbbbbb;
+    color: var(--color-gray-lightest);
+    cursor: pointer;
 }
 
 .btn-complete-order {
@@ -94,7 +113,7 @@ h3 {
     gap: 30px;
     margin: 40px 0;
     padding-bottom: 30px;
-    border-bottom: 1px solid #D2D2D2;
+    border-bottom: 1px solid var(--color-gray-medium);
 }
 
 .menu-emoji {
@@ -108,8 +127,9 @@ h3 {
 }
 
 .menu-info p {
-    color: #8B8B8B;
+    color: var(--color-gray-dark);
 }
+
 /********** SECTION | ORDER **********/
 .section-order h2 {
     text-align: center;
@@ -133,6 +153,7 @@ h3 {
     align-items: center;
     margin: 15px 0 50px 0;
 }
+
 /********** MODAL | FORM **********/
 .section-modal {
     display: block;
@@ -151,12 +172,12 @@ h3 {
 }
 
 .form {
-    background: #ffffff;
+    background: var(--color-white);
     border-radius: 4px;
-    padding: 23px;
-    -webkit-box-shadow: 2px 2px 40px 20px rgba(0,0,0,0.15);
-    -moz-box-shadow: 2px 2px 40px 20px rgba(0,0,0,0.15);
-    box-shadow: 2px 2px 40px 20px rgba(0,0,0,0.15);
+    padding: 30px;
+    -webkit-box-shadow: 2px 2px 40px 20px var(--color-shadow);
+    -moz-box-shadow: 2px 2px 40px 20px var(--color-shadow);
+    box-shadow: 2px 2px 40px 20px var(--color-shadow);
 }
 
 input {
@@ -167,7 +188,7 @@ input {
 }
 
 input:focus {
-    outline-color: #16db99;
+    outline-color: var(--color-green);
 }
 
 .modal-info {
@@ -179,7 +200,23 @@ input:focus {
 .modal-active {
     display: none;
 }
+
+
+
 /********** SECTION | CONFIRMATION **********/
-#section-confirmation {
+.section-confirmation {
     display: none;
+    padding: 40px;
+    text-align: center;
+}
+
+.order-complete {
+    color: var(--color-dark-green);
+    background: var(--color-green-lightest);
+    padding: 32px;
+}
+
+.order-complete-message {
+    font-size: 32px;
+    padding: 32px;
 }

@@ -104,16 +104,18 @@ function showModal() {
 }
 
 // Listen for the form submission
-orderForm.addEventListener('submit', function(e) {
-    // Prevent the form from submitting normally
-    e.preventDefault();
-    // Get the form data
-    const formData = new FormData(orderForm);
-    // Get the name from the form data
-    const name = formData.get('name');
-    // Process the order
-    processOrder(name);
-});
+if (orderForm) {
+    orderForm.addEventListener('submit', function(e) {
+        // Prevent the form from submitting normally
+        e.preventDefault();
+        // Get the form data
+        const formData = new FormData(orderForm);
+        // Get the name from the form data
+        const name = formData.get('name');
+        // Process the order
+        processOrder(name);
+    });
+}
 
 // Function to process the order and show confirmation
 function processOrder(name) {
@@ -124,7 +126,7 @@ function processOrder(name) {
     // Update the confirmation message
     confirmationSection.innerHTML = `
         <div class="order-complete">
-            <h2>Thanks, ${name}! Your order is on its way!</h2>
+            <p class="order-complete-message">Thanks, ${name}! Your order is on its way!</p>
         </div>
     `;
     // Clear the order

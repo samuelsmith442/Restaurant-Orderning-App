@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Smythe&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <!-- CSS STYLESHEET -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
     <title>Jimmy's Diner</title>
 </head>
 <body>
@@ -31,7 +31,7 @@
             <h2>Enter card Details</h2>
             <div class="modal-info">
                 <input type="text" name="name" id="name" placeholder="Enter your name" aria-label="Full name" required/>
-                <input type="text" name="card" id="cardNumber" placeholder="Enter card number" aria-label="Card Number" maxlength="12" required/>
+                <input type="text" name="card" id="cardNumber" placeholder="Enter card number" aria-label="Card Number" minlength="12" maxlength="12" required/>
                 <input type="text" name="ccv" id="ccv" placeholder="Enter CCV" aria-label="CCV" maxlength="3" required/>
                 <button class="btn btn-submit" type="submit">Pay</button>
             </div>
@@ -41,6 +41,6 @@
         <!-- RENDER ORDER CONFIRMATION -->
     </section>
 </main>
-<script src="index.js" type="module"></script>
+<script src="script.js" type="module"></script>
 </body>
 </html>
