@@ -30,7 +30,7 @@ function renderMenu() {
 // Function to add an item to our order
 function addToOrder(id) {
     // Find the item in our menu array
-    const itemToAdd = menuArray.find(item => item.id === id);
+    const itemToAdd = menuArray.find(item => item.id === +id);
     if (itemToAdd) {
         // Add the item to our order
         orderItems.push(itemToAdd);
